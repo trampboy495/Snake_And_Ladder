@@ -8,6 +8,7 @@ public class SnakeAndLadder{
 	static final int isNoPlay = 0;
 
 	public static void playGame(){
+		System.out.print("Dice Roll \t Player Position \n");
 		while(positionOfPlayer < 100){
 			Random rand = new Random();
 			int diceRoll = rand.nextInt(6) + 1;
@@ -27,8 +28,10 @@ public class SnakeAndLadder{
 			else if(positionOfPlayer > 100){
 				positionOfPlayer -= diceRoll;
 			}
+			System.out.print(noOfDiceRolls+" \t\t "+positionOfPlayer+" \n");
 
 		}
+		System.out.println("No of dice rolls required to win "+noOfDiceRolls);
 	}
 
 	public static void main(String[]args){
