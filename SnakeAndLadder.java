@@ -8,7 +8,7 @@ public class SnakeAndLadder{
 	static final int isNoPlay = 0;
 
 	public static void playGame(){
-		while(positionOfPlayer < 100 ){
+		while(positionOfPlayer < 100){
 			Random rand = new Random();
 			int diceRoll = rand.nextInt(6) + 1;
 			int checkCase = rand.nextInt(3);
@@ -20,9 +20,14 @@ public class SnakeAndLadder{
 					positionOfPlayer -= diceRoll;
 					break;
 			}
-			if(positionOfPlayer < 0 ){
+			noOfDiceRolls++;
+			if(positionOfPlayer < 0){
 				positionOfPlayer = 0;
 			}
+			else if(positionOfPlayer > 100){
+				positionOfPlayer -= diceRoll;
+			}
+
 		}
 	}
 
